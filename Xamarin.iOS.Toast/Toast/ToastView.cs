@@ -100,7 +100,7 @@ namespace Xamarin.iOS.Toast
 			point = new PointF (point.X + offsetLeft, point.Y + offsetTop);
 			v.Center = point;
 			window.AddSubview (v);
-			v.AllTouchEvents += delegate { HideToast (null); };
+			v.AllTouchEvents += delegate { HideToast (); };
 
 			m_timer = NSTimer.CreateScheduledTimer (theSettings.DurationSeconds, this, new Selector ("HideToast"), null, false);
 
@@ -108,7 +108,7 @@ namespace Xamarin.iOS.Toast
 		private NSTimer m_timer = null;
 
 		[ExportAttribute("HideToast")]
-		void HideToast (NSTimer timer)
+		void HideToast ()
 		{
 			UIView.BeginAnimations ("");
 			view.Alpha = 0;

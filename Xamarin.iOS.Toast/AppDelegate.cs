@@ -28,15 +28,11 @@ namespace Xamarin.iOS.Toast
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
 
+			window.RootViewController = new Sample();
+
 			// make the window visible
 			window.MakeKeyAndVisible ();
 
-			// Example toasts 
-			Toast.Show ("99 percent of lawyers give the rest a bad name.", 5000);
-			Toast.Show ("If at first you don't succeed, redefine success.");
-			Toast.Show ("The problem with trouble shooting is that trouble shoots back.");
-			Toast.Show ("Failure is not an option. It's bundled with your software.");
-			Toast.Show ("A dog has an owner. A cat has a staff.");
 
 			return true;
 		}
