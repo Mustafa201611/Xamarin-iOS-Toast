@@ -31,7 +31,6 @@ namespace Xamarin.iOS.Toast
 			// make the window visible
 			window.MakeKeyAndVisible ();
 
-
 			// Example toasts 
 			Toast.Show ("99 percent of lawyers give the rest a bad name.", 5000);
 			Toast.Show ("If at first you don't succeed, redefine success.");
